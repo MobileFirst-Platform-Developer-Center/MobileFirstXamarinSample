@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="worklightsample.android">
+	<uses-sdk minSdkVersion="21" targetSdkVersion="21" android:minSdkVersion="16" android:targetSdkVersion="23" />
+	<application android:label="WorklightSample.Android" android:icon="@drawable/icon">
+		<activity android:name="com.worklight.wlclient.ui.UIActivity" />
+		 <activity android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
+           android:theme="@android:style/Theme.NoDisplay"/>
+
+		<!-- GCM Receiver -->
+		<receiver android:name="com.google.android.gms.gcm.GcmReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="worklightsample.android" />
+			</intent-filter>
+		</receiver>
+		<!-- MFPPush Intent Service -->
+		<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+			</intent-filter>
+		</service>
+		<!-- MFPPush Instance ID Listener Service -->
+		<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushInstanceIDListenerService" android:exported="false">
+			<intent-filter>
+				<action android:name="com.google.android.gms.iid.InstanceID" />
+			</intent-filter>
+		</service>
+	</application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+	<uses-permission android:name="android.permission.BROADCAST_WAP_PUSH" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<permission android:name="worklightsample.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="worklightsample.android.permission.C2D_MESSAGE" />
+</manifest>
