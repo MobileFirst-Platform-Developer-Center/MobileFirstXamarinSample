@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{E981F3B1-B141-489F-94F0-12471EB3D593}|Default">
+  <MonoDevelop.Ide.ItemProperties.MobileFirstSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D67B3AF0-E498-461D-B21E-F1CA6CF46C17" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/CustomChallengeHandler.cs">
+    <Files>
+      <File FileName="iOS/AppDelegate.cs" Line="10" Column="19" />
+      <File FileName="Android/MainActivity.cs" Line="11" Column="15" />
+      <File FileName="Data/CustomChallengeHandler.cs" Line="7" Column="32" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
